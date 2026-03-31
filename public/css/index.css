@@ -1,0 +1,282 @@
+:root {
+  --primary: white;
+  --secondary: #043369;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("../../assets/fonts/Lexend-VariableFont_wght.woff2")
+    format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
+body {
+  font-family: Lexend;
+  margin: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+}
+
+nav {
+  background-color: var(--primary);
+  display: flex;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  font-weight: 600;
+  padding: 0;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: center;
+}
+
+.logo-nav {
+  padding: 0.25rem;
+  flex: 1;
+}
+
+.logo-nav img {
+  height: 50px;
+}
+
+.boton-nav {
+  padding: 0.25rem;
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  padding: 0 1rem;
+}
+
+.boton-contacto {
+  background-color: #18519f;
+  color: white;
+  font-size: 1rem;
+  font-family: Lexend;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 0;
+  outline: 2px solid transparent;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.boton-contacto:hover {
+  outline: 2px solid #04336971;
+}
+
+.boton-contacto:active {
+  scale: 0.98;
+}
+
+.hero-principal {
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.hero-principal::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+
+.hero-principal video {
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+}
+
+.logo-hero {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.contenedor-redes {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contenedor-redes a {
+  padding: 0.5rem;
+}
+
+.contenedor-redes a img {
+  height: 2rem;
+}
+
+.contenedor-1 {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  padding: 0 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.contenedor-2 {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.contenedor-2 h1 {
+  text-align: center;
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.contenedor-informacion {
+  background-color: #18519f;
+  padding: 2rem;
+  border-radius: 1rem;
+  flex: 1;
+  min-width: 200px;
+  color: white;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-informacion h2 {
+  margin: 0;
+}
+
+.contenedor-informacion p {
+  margin-bottom: 0;
+}
+
+.contenedor-galeria {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.contenedor-galeria .galeria-img {
+  overflow: hidden;
+  height: 300px;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.contenedor-galeria .galeria-img:hover {
+  scale: 1.025;
+}
+
+.contenedor-galeria .galeria-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  background-color: var(--secondary);
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+.contenedor-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--primarycolor);
+  display: flex;
+  gap: 5rem;
+}
+
+.contenedor-footer-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 2;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.seccion-footer {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+}
+
+.seccion-footer img {
+  max-width: 200px;
+}
+
+.footer-final {
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  nav {
+    justify-content: center;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  .contenedor-galeria {
+    grid-template-columns: 1fr;
+  }
+}
