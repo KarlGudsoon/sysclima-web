@@ -240,6 +240,7 @@ footer a {
   padding: 2rem;
   color: var(--primarycolor);
   display: flex;
+  flex-wrap: wrap;
   gap: 5rem;
 }
 
