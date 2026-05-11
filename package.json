@@ -1,0 +1,25 @@
+{
+  "name": "sysclima-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarlGudsoon/sysclima-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarlGudsoon/sysclima-web/issues"
+  },
+  "homepage": "https://github.com/KarlGudsoon/sysclima-web#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "helmet": "^8.1.0"
+  }
+}
