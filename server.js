@@ -4,6 +4,13 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public"));
 
+app.get("/auth", (req, res) =>
+  res.sendFile(path.join(__dirname, "public", "auth", "index.html")),
+);
+app.get("/dashboard", (req, res) =>
+  res.sendFile(path.join(__dirname, "public", "dashboard", "index.html")),
+);
+
 const authRoutes = require("./routes/auth");
 const contactRoutes = require("./routes/contact");
 const usersRoutes = require("./routes/users");

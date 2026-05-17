@@ -21,11 +21,12 @@
           <li><a href="#trabajos">Trabajos</a></li>
         </ul>
         <div class="boton-nav">
-          <button class="boton-contacto">Contactar</button>
+          <a class="boton-contacto" href="/auth">Ingresar</a>
         </div>
       </nav>
     </header>
     <main>
+      <p id="mensaje"></p>
       <section class="hero-principal" id="inicio">
         <video src="assets/video/hit.mp4" autoplay muted loop></video>
         <div class="logo-hero">
@@ -41,6 +42,46 @@
           <div>
             <button class="boton-contacto" id="btnMensaje">Mensajes</button>
           </div>
+        </div>
+      </section>
+      <section class="contenedor-1">
+        <div class="contenedor-informacion">
+          <h2>Contactanos</h2>
+          <p>
+            Si tienes alguna consulta, proyecto o simplemente quieres saber más
+            sobre nuestros servicios, no dudes en contactarnos. Estamos aquí
+            para ayudarte a encontrar la mejor solución de climatización para
+            tus necesidades. ¡Esperamos tener noticias tuyas pronto!
+          </p>
+        </div>
+        <div class="contenedor-informacion flex">
+          <h2>Contacto</h2>
+          <form id="contact-form">
+            <div class="campo">
+              <label for="contact-nombre">Nombre</label>
+              <input
+                type="text"
+                id="contact-nombre"
+                placeholder="Escribe tu nombre"
+              />
+            </div>
+            <div class="campo">
+              <label for="contact-email">Correo electrónico</label>
+              <input
+                type="email"
+                id="contact-email"
+                placeholder="Escribe tu correo electrónico"
+              />
+            </div>
+            <div class="campo">
+              <label for="contact-mensaje">Mensaje</label>
+              <textarea
+                id="contact-mensaje"
+                placeholder="Escribe tu mensaje aquí..."
+              ></textarea>
+            </div>
+            <button type="submit">Enviar mensaje</button>
+          </form>
         </div>
       </section>
       <section class="contenedor-2" id="nosotros">
@@ -67,29 +108,6 @@
             </p>
           </div>
         </div>
-      </section>
-      <section class="contenedor-2">
-        <h2>Registro de Administrador</h2>
-        <form id="register-form">
-          <input type="text" id="username" placeholder="Nombre de usuario" />
-          <input type="email" id="email" placeholder="Correo electrónico" />
-          <input type="password" id="password" placeholder="Contraseña" />
-          <button type="submit">Registrarse</button>
-        </form>
-        <p id="mensaje"></p>
-
-        <h2>Login</h2>
-        <form id="login-form">
-          <input
-            type="email"
-            id="login-email"
-            placeholder="Correo electrónico"
-          />
-          <input type="password" id="login-password" placeholder="Contraseña" />
-          <button type="submit">Iniciar sesión</button>
-        </form>
-
-        <p id="mensaje-login"></p>
       </section>
       <section class="contenedor-2" id="trabajos">
         <h1>Nuestro trabajo</h1>
@@ -136,27 +154,6 @@
           <div class="galeria-img">
             <img src="assets/img/trabajos/14.jpg" alt="Trabajo 9" />
           </div>
-        </div>
-      </section>
-      <section class="contenedor-1">
-        <div class="contenedor-informacion">
-          <h2>Contactanos</h2>
-          <p>
-            Si tienes alguna consulta, proyecto o simplemente quieres saber más
-            sobre nuestros servicios, no dudes en contactarnos. Estamos aquí
-            para ayudarte a encontrar la mejor solución de climatización para
-            tus necesidades. ¡Esperamos tener noticias tuyas pronto!
-          </p>
-        </div>
-        <div class="contenedor-informacion flex">
-          <h2>Contacto</h2>
-          <form id="contact-form">
-            <input type="text" id="contact-nombre" placeholder="Tu nombre" />
-            <input type="email" id="contact-email" placeholder="Tu correo" />
-            <textarea id="contact-mensaje" placeholder="Tu mensaje"></textarea>
-            <button type="submit">Enviar mensaje</button>
-          </form>
-          <p id="mensaje-contacto"></p>
         </div>
       </section>
     </main>

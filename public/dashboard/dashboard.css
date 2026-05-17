@@ -1,0 +1,85 @@
+body {
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  height: 100vh;
+}
+
+main {
+  flex: 1;
+  margin: 1rem;
+  padding: 2rem;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow-y: auto;
+  position: relative;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+}
+
+.contenedor-formulario {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  color: black;
+  border-radius: 0.5rem;
+  overflow: auto;
+  flex: 1;
+  max-width: 600px;
+}
+
+.btn-eliminar {
+  background-color: transparent;
+  color: rgb(221, 38, 38);
+  border: 1px solid rgb(221, 38, 38);
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-eliminar:hover {
+  background-color: rgb(221, 38, 38);
+  color: white;
+}
+
+#lista-mensajes {
+  margin-top: 1rem;
+  max-width: 600px;
+}
+
+.mensaje-card {
+  background-color: white;
+  padding: 1rem;
+  color: black;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.mensaje-card .btn-eliminar {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .contenedor-formulario {
+    height: auto;
+    overflow: visible;
+  }
+
+  .contenedor-principal {
+    flex-direction: column;
+    min-height: auto;
+  }
+}

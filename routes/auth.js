@@ -7,9 +7,9 @@ const SECRET = "mi_clave_secreta";
 
 const usuarios = [
   {
-    username: "juan",
-    email: "juan@gmail.com",
-    password: "$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+    username: "admin",
+    email: "admin@gmail.com",
+    password: "$2b$10$rx4QscS8ujlf5ZC4yKnpl.pK81KTuX7ldxDl2gSjNLijrE58b4Y8y",
     rol: "admin",
   },
 ];
@@ -29,10 +29,22 @@ router.post("/register", async (req, res) => {
     return res.status(409).json({ message: "El email ya está registrado" });
   }
 
+  // const existe = await pool.query("SELECT * FROM usuarios WHERE email = $1", [
+  //   email,
+  // ]);
+  // if (existe.rows.length > 0) {
+  //   return res.status(409).json({ message: "El email ya está registrado" });
+  // }
+
   const hash = await bcrypt.hash(password, 10);
 
   // todo usuario registrado desde este form es admin
   usuarios.push({ username, email, password: hash, rol: "admin" });
+
+  // await pool.query(
+  //   'INSERT INTO usuarios (username, email, password, rol) VALUES ($1, $2, $3, $4)',
+  //   [username, email, hash, 'admin']
+  // );
 
   res.status(201).json({ message: "¡Usuario registrado con éxito!" });
 });
@@ -48,6 +60,10 @@ router.post("/login", async (req, res) => {
   }
 
   const usuario = usuarios.find((u) => u.email === email);
+
+  // const resultado = await pool.query('SELECT * FROM usuarios WHERE email = $1', [email]);
+  // const usuario = resultado.rows[0];
+
   if (!usuario) {
     return res.status(401).json({ message: "Credenciales incorrectas" });
   }
@@ -60,7 +76,7 @@ router.post("/login", async (req, res) => {
   const token = jwt.sign(
     { username: usuario.username, email: usuario.email, rol: usuario.rol },
     SECRET,
-    { expiresIn: "2h" },
+    { expiresIn: "1h" },
   );
 
   res.status(200).json({
