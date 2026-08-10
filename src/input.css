@@ -69,6 +69,25 @@ body {
   outline: 1px solid rgb(201, 18, 18);
 }
 
+.clip-path {
+  animation: expand 1.5s ease-in-out;
+}
+
+@keyframes expand {
+  0% {
+    clip-path: circle(0% at 50% 100%);
+  }
+  50% {
+    clip-path: circle(75% at 50% 100%);
+  }
+  75% {
+    clip-path: circle(75% at 50% 100%);
+  }
+  100% {
+    clip-path: circle(150% at 50% 100%);
+  }
+}
+
 @layer components {
   .contenedor-informacion {
     @apply flex-1 min-w-[200px] rounded-2xl border border-black/10 bg-brand p-8 text-white shadow-md;
