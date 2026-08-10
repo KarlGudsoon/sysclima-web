@@ -1,0 +1,46 @@
+services:
+  web:
+    build: .
+    container_name: sysclima-web
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: sysclima
+      DB_USER: sysclima
+      DB_PASSWORD: sysclima123
+      APP_ENV: dev
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: sysclima-db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: sysclima
+      MYSQL_USER: sysclima
+      MYSQL_PASSWORD: sysclima123
+      MYSQL_ROOT_PASSWORD: root123
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: sysclima-pma
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: sysclima
+      PMA_PASSWORD: sysclima123
+    depends_on:
+      - db
+
+volumes:
+  db_data:

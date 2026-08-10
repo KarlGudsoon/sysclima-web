@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="preload" href="css/tailwind.css" as="style" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>SyS Climatización</title>
+  </head>
+  <body>
+    <header>
+      <nav class="flex flex-wrap items-center justify-between px-2 py-4">
+        <div class="flex-1 p-1">
+          <img src="assets/img/logo-1.webp" alt="" class="h-12" />
+        </div>
+        <ul
+          class="flex list-none w-fit text-brand rounded-3xl flex-wrap justify-center items-center bg-tertiary/80 gap-6 font-semibold"
+        >
+          <li
+            class="px-6 py-2 hover:bg-brand hover:text-secondary rounded-3xl transition duration-200"
+          >
+            <a href="#inicio">Inicio</a>
+          </li>
+          ·
+          <li
+            class="px-6 py-2 hover:bg-brand hover:text-secondary rounded-3xl transition-colors duration-200"
+          >
+            <a href="#nosotros">Misión</a>
+          </li>
+          ·
+          <li
+            class="px-6 py-2 hover:bg-brand hover:text-secondary rounded-3xl transition duration-200"
+          >
+            <a href="#trabajos">Trabajos</a>
+          </li>
+        </ul>
+        <div class="flex flex-1 justify-end p-1 pr-4">
+          <button class="boton-contacto" href="/auth">
+            <div class="flex items-center gap-2 pl-2">
+              Solicita tu cotización
+              <div
+                class="flex justify-center items-center bg-secondary size-8 rounded-full"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="rotate-45"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <g
+                    fill="none"
+                    stroke="#033275"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path stroke-dasharray="20" d="M12 21l0 -17.5">
+                      <animate
+                        fill="freeze"
+                        attributeName="stroke-dashoffset"
+                        dur="0.3s"
+                        values="20;0"
+                      />
+                    </path>
+                    <path
+                      stroke-dasharray="12"
+                      stroke-dashoffset="12"
+                      d="M12 3l7 7M12 3l-7 7"
+                    >
+                      <animate
+                        fill="freeze"
+                        attributeName="stroke-dashoffset"
+                        begin="0.3s"
+                        dur="0.2s"
+                        to="0"
+                      />
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <p id="mensaje"></p>
+      <section
+        class="mx-auto mb-4 flex max-w-300 flex-col flex-wrap gap-4 px-4"
+      >
+        <h1
+          class="m-auto mb-4 mt-4 rounded-lg p-4 text-[clamp(1.5rem,2rem+2vw,5rem)] text-center font-bold text-brand max-w-300"
+        >
+          La mejor solución de climatización para tu hogar, oficina o negocio
+        </h1>
+        <p class="m-auto max-w-200 text-center text-lg text-brand">
+          Ofrecemos servicios de instalación, mantenimiento y reparación de
+          sistemas de climatización para hogares, oficinas y espacios
+          comerciales.
+        </p>
+      </section>
+      <section
+        class="relative m-4 h-150 flex justify-center rounded-2xl z-1"
+        id="inicio"
+      >
+        <video
+          src="assets/video/hit.mp4"
+          autoplay
+          muted
+          loop
+          class="absolute max-w-300 h-full rounded-[3rem] w-full object-cover shadow-xl"
+        ></video>
+        <div
+          class="relative z-10 flex h-full w-full flex-col items-center justify-center"
+        >
+          <img src="assets/img/logo-1.webp" alt="" />
+          <div class="flex gap-2">
+            <a href="https://www.instagram.com/sysclima.cl/" class="p-2"
+              ><img src="assets/icon/ri--instagram-fill.svg" alt="" class="h-8"
+            /></a>
+            <a href="https://wa.me/+56955154622" class="p-2"
+              ><img src="assets/icon/ri--whatsapp-fill.svg" alt="" class="h-8"
+            /></a>
+          </div>
+        </div>
+      </section>
+      <section
+        class="mx-auto mb-12 relative flex max-w-300 flex-col flex-wrap gap-4 p-4 py-8 bg-tertiary rounded-b-4xl z-0"
+      >
+        <div
+          class="mx-auto flex max-w-300 flex-wrap gap-4 px-4 before:absolute before:bg-tertiary before:w-full before:h-20 before:left-0 before:-top-20 before:z-[-1]"
+        >
+          <div
+            class="contenedor-informacion bg-secondary text-brand items-center flex flex-col text-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="5rem"
+              height="5rem"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                fill="currentColor"
+                d="M11.5 20q-.8 0-1.487-.4T8.9 18.5q-.275-.5-.012-1T9.7 17q.325 0 .575.2t.45.45q.125.175.338.263T11.5 18q.425 0 .713-.288T12.5 17t-.288-.712T11.5 16H3q-.425 0-.712-.288T2 15t.288-.712T3 14h8.5q1.25 0 2.125.875T14.5 17t-.875 2.125T11.5 20M3 10q-.425 0-.712-.288T2 9t.288-.712T3 8h12.5q.625 0 1.063-.437T17 6.5t-.437-1.062T15.5 5q-.4 0-.75.188t-.55.537q-.175.3-.425.538t-.6.237q-.5 0-.812-.375t-.163-.8q.35-1.05 1.263-1.687T15.5 3q1.45 0 2.475 1.025T19 6.5t-1.025 2.475T15.5 10zm16.95 7.7q-.5.225-.975-.062T18.5 16.8q0-.35.238-.587t.537-.413q.35-.2.538-.55T20 14.5q0-.625-.437-1.062T18.5 13H3q-.425 0-.712-.288T2 12t.288-.712T3 11h15.5q1.45 0 2.475 1.025T22 14.5q0 1.05-.55 1.913t-1.5 1.287"
+              />
+            </svg>
+            <h2 class="my-4 font-bold opacity-50">
+              Instalación de sistemas de climatización
+            </h2>
+            <p>
+              Ofrecemos servicios de instalación de sistemas de climatización
+              para hogares, oficinas y espacios comerciales.
+            </p>
+          </div>
+          <div
+            class="contenedor-informacion bg-secondary text-brand items-center flex flex-col text-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="5rem"
+              height="5rem"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M10 21a1 1 0 0 0 4 0a1.8 1.8 0 0 1 2.95-1.22a1 1 0 0 0 2.83-2.83A1.8 1.8 0 0 1 21 14a1 1 0 0 0 0-4a1.8 1.8 0 0 1-1.22-2.95a1 1 0 0 0-2.83-2.83A1.8 1.8 0 0 1 14 3a1 1 0 0 0-4 0a1.8 1.8 0 0 1-2.95 1.22a1 1 0 0 0-2.83 2.83A1.8 1.8 0 0 1 3 10a1 1 0 0 0 0 4a1.8 1.8 0 0 1 1.22 2.95a1 1 0 0 0 2.83 2.83A1.8 1.8 0 0 1 10 21"
+                />
+              </g>
+            </svg>
+
+            <h2 class="my-4 font-bold opacity-50">
+              Mantenimiento preventivo y correctivo
+            </h2>
+            <p>
+              Realizamos mantenimiento preventivo y correctivo para garantizar
+              que su sistema de climatización funcione de manera óptima.
+            </p>
+          </div>
+          <div
+            class="contenedor-informacion bg-secondary text-brand items-center flex flex-col text-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="5rem"
+              height="5rem"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                fill="currentColor"
+                d="M8 2a6 6 0 0 1 5.743 7.743L20 16a2.828 2.828 0 0 1-3.785 4.194L16 20l-6.257-6.257a6 6 0 0 1-7.458-7.577L5.123 9l2.814-.937l.125-.126L9 5.127L6.158 2.288C6.738 2.101 7.358 2 8 2m4.586 9.57a.829.829 0 0 0-1.156 1.188l5.984 5.828a.829.829 0 0 0 1.172-1.172z"
+              />
+            </svg>
+
+            <h2 class="my-4 font-bold opacity-50">
+              Reparación de sistemas de climatización
+            </h2>
+            <p>
+              Si su sistema de climatización presenta problemas, nuestro equipo
+              puede diagnosticar y reparar cualquier falla.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="mx-4 rounded-4xl" id="contacto">
+        <div
+          class="mx-auto relative flex max-w-300 flex-wrap gap-6 p-4 bg-brand rounded-4xl text-secondary"
+        >
+          <div
+            class="contenedor-informacion flex flex-col flex-1 justify-center bg-transparent p-8 shadow-none border-0"
+          >
+            <span class="font-bold opacity-50">CONTACTO</span>
+            <h2 class="text-3xl font-bold">Habla con nosotros</h2>
+            <p class="mb-0">
+              Si tienes alguna consulta, proyecto o simplemente quieres saber
+              más sobre nuestros servicios, no dudes en contactarnos.
+            </p>
+            <ul>
+              <li><img src="" alt="" /></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <div class="flex-1 relative flex justify-center items-center">
+            <a
+              class="boton-contacto bg-secondary text-brand"
+              href="/pages/contacto.html"
+            >
+              <div class="flex items-center gap-2 pl-2">
+                Solicita tu cotización
+                <div
+                  class="flex justify-center items-center bg-brand text-secondary size-8 rounded-full"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="rotate-45"
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path stroke-dasharray="20" d="M12 21l0 -17.5">
+                        <animate
+                          fill="freeze"
+                          attributeName="stroke-dashoffset"
+                          dur="0.3s"
+                          values="20;0"
+                        />
+                      </path>
+                      <path
+                        stroke-dasharray="12"
+                        stroke-dashoffset="12"
+                        d="M12 3l7 7M12 3l-7 7"
+                      >
+                        <animate
+                          fill="freeze"
+                          attributeName="stroke-dashoffset"
+                          begin="0.3s"
+                          dur="0.2s"
+                          to="0"
+                        />
+                      </path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="8rem"
+            height="8rem"
+            viewBox="0 0 512 512"
+            class="absolute z-10 right-0 bottom-0 opacity-10"
+          >
+            <path d="M0 0h512v512H0z" fill="none" />
+            <path
+              fill="currentColor"
+              d="m447.88 313.27l19.25-10.64l-21.28-38.51l-19.25 10.64a133.4 133.4 0 0 0-38.54 32.1L300 256l88.07-50.86a133.4 133.4 0 0 0 38.54 32.1l19.25 10.64l21.28-38.51l-19.25-10.64a89.3 89.3 0 0 1-20.93-16L480 152.05L458 114l-53 30.58a89 89 0 0 1-3.42-26.15l.41-22l-44-.82l-.41 22a133.6 133.6 0 0 0 8.49 49.39L278 217.89V116.18a133.5 133.5 0 0 0 47.06-17.33L343.9 87.5l-22.71-37.69l-18.84 11.35A89.5 89.5 0 0 1 278 71.27V16h-44v55.27a89.5 89.5 0 0 1-24.35-10.11l-18.84-11.35L168.1 87.5l18.84 11.35A133.5 133.5 0 0 0 234 116.18v101.71L145.93 167a133.6 133.6 0 0 0 8.53-49.43l-.41-22l-44 .82l.41 22a89 89 0 0 1-3.42 26.15L54 114l-22 38.1l53.05 30.64a89.3 89.3 0 0 1-20.93 16l-19.25 10.63l21.28 38.51l19.25-10.64a133.4 133.4 0 0 0 38.54-32.1L212 256l-88.07 50.86a133.4 133.4 0 0 0-38.54-32.1l-19.24-10.64l-21.28 38.51l19.25 10.64a89.3 89.3 0 0 1 20.93 16L32 360l22 38.1l53.05-30.63a89 89 0 0 1 3.42 26.15l-.41 22l44 .82l.41-22a133.6 133.6 0 0 0-8.54-49.44L234 294.11v101.71a133.5 133.5 0 0 0-47.06 17.33L168.1 424.5l22.71 37.69l18.84-11.35A89.5 89.5 0 0 1 234 440.73V496h44v-55.27a89.5 89.5 0 0 1 24.35 10.11l18.84 11.35l22.71-37.69l-18.84-11.35A133.5 133.5 0 0 0 278 395.82V294.11L366.07 345a133.6 133.6 0 0 0-8.53 49.43l.41 22l44-.82l-.41-22a89 89 0 0 1 3.46-26.19l53 30.63L480 360l-53-30.69a89.3 89.3 0 0 1 20.88-16.04"
+            />
+          </svg>
+        </div>
+      </section>
+      <section
+        class="mx-auto mb-4 flex max-w-300 flex-col flex-wrap gap-4 px-4"
+        id="nosotros"
+      >
+        <h1 class="m-0 mb-4 mt-4 rounded-lg p-4 text-brand text-4xl font-bold">
+          Sobre nosotros
+        </h1>
+        <div class="mx-auto flex max-w-300 flex-wrap gap-4 px-4">
+          <div class="contenedor-informacion">
+            <h2>¿Quienes somos?</h2>
+            <p>
+              Somos una empresa emergente y joven, con vasta experiencia de los
+              socios, compuesta por un equipo profesional altamente calificado
+              en el diseño, montaje y mantenimiento de sistemas de
+              climatización, dedicado a asegurar un servicio de calidad y
+              compromiso hacia nuestros clientes.
+            </p>
+          </div>
+          <div class="contenedor-informacion">
+            <h2>Visión</h2>
+            <p>
+              Ser la fuerza impulsora hacia un futuro de confort consciente,
+              transformando la industria de la climatización a través de
+              tecnologías de ultra-eficiencia energética y soluciones de huella
+              de carbono cero que protejan tanto el bienestar de las personas
+              como la salud de nuestro planeta
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="mx-auto mb-4 flex max-w-300 flex-col flex-wrap gap-4 px-4"
+        id="trabajos"
+      >
+        <h1 class="m-0 mb-4 mt-4 rounded-lg p-4 text-brand text-4xl font-bold">
+          Nuestro trabajo
+        </h1>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <div class="galeria-img">
+            <img src="assets/img/trabajos/01.jpeg" alt="Trabajo 1" />
+          </div>
+          <div class="galeria-img">
+            <img src="assets/img/trabajos/02.jpg" alt="Trabajo 1-2" />
+          </div>
+          <div class="galeria-img">
+            <img src="assets/img/trabajos/03.jpeg" alt="Trabajo 1" />
+          </div>
+          <div class="galeria-img">
+            <img src="assets/img/trabajos/04.jpeg" alt="Trabajo 2" />
+          </div>
+          <div class="galeria-img">
+            <img src="assets/img/trabajos/05.jpg" alt="Trabajo 2-1" />
+          </div>
+          <div class="galeria-img">
+            <img src="assets/img/trabajos/06.jpeg" alt="Trabajo 2" />
+          </div>
+          <div class="galeria-img">
+            <img src="assets/img/trabajos/07.jpg" alt="Trabajo 2" />
+          </div>
+          <div class="galeria-img">
+            <img src="assets/img/trabajos/08.jpeg" alt="Trabajo 3" />
+          </div>
+          <div class="galeria-img">
+            <img src="assets/img/trabajos/09.jpg" alt="Trabajo 3-1" />
+          </div>
+          <div class="galeria-img">
+            <img src="assets/img/trabajos/10.jpeg" alt="Trabajo 3" />
+          </div>
+          <div class="galeria-img">
+            <img src="assets/img/trabajos/11.jpg" alt="Trabajo 4" />
+          </div>
+          <div class="galeria-img">
+            <img src="assets/img/trabajos/12.jpg" alt="Trabajo 5" />
+          </div>
+          <div class="galeria-img">
+            <img src="assets/img/trabajos/13.jpeg" alt="Trabajo 5" />
+          </div>
+          <div class="galeria-img">
+            <img src="assets/img/trabajos/14.jpg" alt="Trabajo 9" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-brand text-white">
+      <div class="mx-auto flex max-w-300 flex-wrap gap-20 p-8">
+        <div class="flex min-w-50 flex-1 flex-col">
+          <img src="assets/img/logo-1.webp" alt="" class="max-w-50" />
+          <p>
+            SyS Climatización es un empresa emergente y joven, con vasta
+            experiencia de los socios, compuesta por un equipo profesional
+            altamente calificado en el diseño, montaje y mantenimiento de
+            sistemas de climatización, dedicado a asegurar un servicio de
+            calidad y compromiso hacia nuestros clientes.
+          </p>
+          <div class="flex gap-2">
+            <a href="" target="_blank" class="p-2"
+              ><img src="assets/icon/ri--whatsapp-fill.svg" alt="" class="h-8"
+            /></a>
+            <a href="" target="_blank" class="p-2"
+              ><img src="assets/icon/ri--instagram-fill.svg" alt="" class="h-8"
+            /></a>
+          </div>
+        </div>
+        <div class="flex flex-1 flex-col">
+          <div class="flex flex-col gap-2">
+            <a href="#inicio" class="rounded-lg px-4 py-2 hover:bg-white/25"
+              >Inicio</a
+            >
+            <a href="#nosotros" class="rounded-lg px-4 py-2 hover:bg-white/25"
+              >Nosotros</a
+            >
+            <a href="#trabajos" class="rounded-lg px-4 py-2 hover:bg-white/25"
+              >Nuestro trabajo</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="bg-black/25 p-2 text-center">
+        <span
+          >&copy; 2026 SyS Climatización. Todos los derechos reservados.</span
+        >
+        <span>
+          Página Web desarrollada por
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/adri%C3%A1n-maturana-mu%C3%B1oz-3a7b501aa/"
+            >Adrián Maturana</a
+          >
+        </span>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

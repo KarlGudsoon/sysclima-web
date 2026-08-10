@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/tailwind.css" />
+    <link rel="preload" href="/css/tailwind.css" as="style" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>SyS Climatización</title>
+  </head>
+  <body class="min-h-dvh flex flex-col">
+    <header>
+      <nav class="flex flex-wrap items-center justify-between px-2 py-4">
+        <div class="flex-1 p-1">
+          <img src="/assets/img/logo-1.webp" alt="" class="h-12" />
+        </div>
+        <ul
+          class="flex list-none w-fit text-brand rounded-3xl flex-wrap justify-center items-center bg-tertiary/80 gap-6 font-semibold"
+        >
+          <li
+            class="px-6 py-2 hover:bg-brand hover:text-secondary rounded-3xl transition duration-200"
+          >
+            <a href="/">Inicio</a>
+          </li>
+          ·
+          <li
+            class="px-6 py-2 hover:bg-brand hover:text-secondary rounded-3xl transition-colors duration-200"
+          >
+            <a href="#nosotros">Misión</a>
+          </li>
+          ·
+          <li
+            class="px-6 py-2 hover:bg-brand hover:text-secondary rounded-3xl transition duration-200"
+          >
+            <a href="#trabajos">Trabajos</a>
+          </li>
+        </ul>
+        <div class="flex flex-1 justify-end p-1 pr-4">
+          <button class="boton-contacto" href="/auth">
+            <div class="flex items-center gap-2 pl-2">
+              Solicita tu cotización
+              <div
+                class="flex justify-center items-center bg-secondary size-8 rounded-full"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="rotate-45"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <g
+                    fill="none"
+                    stroke="#033275"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path stroke-dasharray="20" d="M12 21l0 -17.5">
+                      <animate
+                        fill="freeze"
+                        attributeName="stroke-dashoffset"
+                        dur="0.3s"
+                        values="20;0"
+                      />
+                    </path>
+                    <path
+                      stroke-dasharray="12"
+                      stroke-dashoffset="12"
+                      d="M12 3l7 7M12 3l-7 7"
+                    >
+                      <animate
+                        fill="freeze"
+                        attributeName="stroke-dashoffset"
+                        begin="0.3s"
+                        dur="0.2s"
+                        to="0"
+                      />
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="flex-1 flex flex-col">
+      <p id="mensaje"></p>
+      <section
+        class="mx-4 my-6 rounded-4xl h-full flex-1 flex flex-col justify-center"
+        id="contacto"
+      >
+        <div
+          class="mx-auto flex max-w-300 flex-wrap gap-6 items-center justify-center"
+        >
+          <div
+            class="contenedor-informacion flex flex-col justify-center bg-transparent p-0 px-8 text-brand shadow-none border-0"
+          >
+            <span class="font-bold opacity-50 mb-4">CONTACTO</span>
+            <h2 class="text-4xl font-bold mb-4">Habla con nosotros</h2>
+            <p class="mb-0">
+              Si tienes alguna consulta, proyecto o simplemente quieres saber
+              más sobre nuestros servicios, no dudes en contactarnos.
+            </p>
+            <div class="w-full bg-brand/20 h-0.5 my-6"></div>
+            <div>
+              <div class="text-brand flex items-center gap-4 mb-6">
+                <svg
+                  class="bg-brand/10 shrink-0 p-2 rounded-full"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3rem"
+                  height="3rem"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-dasharray="62"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 3c0.5 0 2.5 4.5 2.5 5c0 1 -1.5 2 -2 3c-0.5 1 0.5 2 1.5 3c0.39 0.39 2 2 3 1.5c1 -0.5 2 -2 3 -2c0.5 0 5 2 5 2.5c0 2 -1.5 3.5 -3 4c-1.5 0.5 -2.5 0.5 -4.5 0c-2 -0.5 -3.5 -1 -6 -3.5c-2.5 -2.5 -3 -4 -3.5 -6c-0.5 -2 -0.5 -3 0 -4.5c0.5 -1.5 2 -3 4 -3Z"
+                  ></path>
+                </svg>
+                <ul>
+                  <li class="font-semibold">Llámanos</li>
+                  <li>
+                    <a class="hover:underline" href="https://wa.me/+56955154622"
+                      >+569 5515 4622</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="text-brand flex items-center gap-4 mb-6">
+                <svg
+                  class="bg-brand/10 shrink-0 p-2 rounded-full"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3rem"
+                  height="3rem"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    fill="currentColor"
+                    d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zM20 8l-7.475 4.675q-.125.075-.262.113t-.263.037t-.262-.037t-.263-.113L4 8v10h16zm-8 3l8-5H4zM4 8v.25v-1.475v.025V6v.8v-.012V8.25zv10z"
+                  />
+                </svg>
+                <ul>
+                  <li class="font-semibold">Escríbenos</li>
+                  <li>
+                    <a
+                      class="hover:underline"
+                      href="mailto:sergio.martinez@sysclima.cl"
+                      >sergio.martinez@sysclima.cl</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="text-brand flex items-center gap-4 mb-6">
+                <svg
+                  class="bg-brand/10 shrink-0 p-2 rounded-full"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3rem"
+                  height="3rem"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    fill="currentColor"
+                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+                  />
+                </svg>
+
+                <ul>
+                  <li class="font-semibold">Visítanos</li>
+                  <li>
+                    <a
+                      class="hover:underline"
+                      href="https://www.instagram.com/sysclima.cl/"
+                      >@sysclima.cl</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap justify-center">
+            <div
+              class="contenedor-informacion rounded-3xl h-fit z-10 bg-[#fafcfe] p-10 text-brand shadow-lg border-0 flex flex-col justify-around gap-4"
+            >
+              <h2 class="text-2xl font-bold">Envíanos un mensaje</h2>
+              <p>Completa el formulario y te contactaremos a la brevedad.</p>
+              <form id="contact-form" class="flex flex-col h-fit gap-4">
+                <div class="campo">
+                  <label class="font-semibold" for="contact-nombre"
+                    >Nombre</label
+                  >
+                  <input
+                    type="text"
+                    id="contact-nombre"
+                    placeholder="Tu nombre"
+                    class="input-campo"
+                  />
+                </div>
+                <div class="campo">
+                  <label class="font-semibold" for="contact-email"
+                    >Correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    id="contact-email"
+                    placeholder="tu@correo.com"
+                    class="input-campo"
+                  />
+                </div>
+                <div class="campo">
+                  <label class="font-semibold" for="contact-mensaje"
+                    >Mensaje</label
+                  >
+                  <textarea
+                    id="contact-mensaje"
+                    rows="4"
+                    placeholder="Escribe tu mensaje aquí..."
+                    class="input-campo"
+                  ></textarea>
+                </div>
+                <button
+                  class="boton-contacto w-fit"
+                  type="submit"
+                  id="btn-enviar"
+                >
+                  <div class="flex items-center gap-2 pl-2">
+                    Enviar mensaje
+                    <div
+                      class="flex justify-center items-center bg-secondary size-8 rounded-full"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="rotate-45"
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <g
+                          fill="none"
+                          stroke="#033275"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path stroke-dasharray="20" d="M12 21l0 -17.5">
+                            <animate
+                              fill="freeze"
+                              attributeName="stroke-dashoffset"
+                              dur="0.3s"
+                              values="20;0"
+                            />
+                          </path>
+                          <path
+                            stroke-dasharray="12"
+                            stroke-dashoffset="12"
+                            d="M12 3l7 7M12 3l-7 7"
+                          >
+                            <animate
+                              fill="freeze"
+                              attributeName="stroke-dashoffset"
+                              begin="0.3s"
+                              dur="0.2s"
+                              to="0"
+                            />
+                          </path>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </form>
+            </div>
+            <div
+              class="w-full h-50 -top-5 rounded-2xl overflow-hidden scale-95 md:top-auto md:h-auto md:max-w-50 self-stretch relative md:-left-5"
+            >
+              <img
+                class="h-full w-full object-cover"
+                src="/assets/img/trabajos/02.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="mx-auto flex min-h-50 max-w-300 flex-wrap gap-6 px-4 items-center bg-tertiary/75 text-brand rounded-2xl my-6"
+        >
+          <div class="flex-1 flex gap-4 p-6 self-stretch">
+            <div class="size-16 shrink-0 p-2 bg-secondary/90 rounded-full">
+              <svg
+                class=""
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  fill="currentColor"
+                  d="M7.75 2.5a.75.75 0 0 0-1.5 0v1.58c-1.44.115-2.384.397-3.078 1.092c-.695.694-.977 1.639-1.093 3.078h19.842c-.116-1.44-.398-2.384-1.093-3.078c-.694-.695-1.639-.977-3.078-1.093V2.5a.75.75 0 0 0-1.5 0v1.513C15.585 4 14.839 4 14 4h-4c-.839 0-1.585 0-2.25.013z"
+                />
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M2 12c0-.839 0-1.585.013-2.25h19.974C22 10.415 22 11.161 22 12v2c0 3.771 0 5.657-1.172 6.828S17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172S2 17.771 2 14zm15 2a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-xl mb-2">
+                ¿Prefieres agendar una visita técnica?
+              </h3>
+              <p>
+                Coordinamos una visita sin costo para evaluar tu espacio y
+                recomendarte la mejor solución.
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-full md:w-0.5 bg-brand/20 h-0.5 md:h-auto md:self-stretch md:my-6"
+          ></div>
+          <div class="flex-1 flex gap-4 p-6 self-stretch">
+            <div class="size-16 shrink-0 p-2 bg-secondary/90 rounded-full">
+              <svg
+                class=""
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  fill="currentColor"
+                  d="M7.75 2.5a.75.75 0 0 0-1.5 0v1.58c-1.44.115-2.384.397-3.078 1.092c-.695.694-.977 1.639-1.093 3.078h19.842c-.116-1.44-.398-2.384-1.093-3.078c-.694-.695-1.639-.977-3.078-1.093V2.5a.75.75 0 0 0-1.5 0v1.513C15.585 4 14.839 4 14 4h-4c-.839 0-1.585 0-2.25.013z"
+                />
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M2 12c0-.839 0-1.585.013-2.25h19.974C22 10.415 22 11.161 22 12v2c0 3.771 0 5.657-1.172 6.828S17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172S2 17.771 2 14zm15 2a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-xl mb-2">
+                Cotización rápida y sin compromiso
+              </h3>
+              <p>
+                Te entregamos una propuesta clara, detallada y adaptada a tus
+                necesidades.
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-full md:w-0.5 bg-brand/20 h-0.5 md:h-auto md:self-stretch md:my-6"
+          ></div>
+          <div class="flex-1 flex gap-4 p-6 self-stretch">
+            <div class="size-16 shrink-0 p-2 bg-secondary/90 rounded-full">
+              <svg
+                class=""
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  fill="currentColor"
+                  d="M7.75 2.5a.75.75 0 0 0-1.5 0v1.58c-1.44.115-2.384.397-3.078 1.092c-.695.694-.977 1.639-1.093 3.078h19.842c-.116-1.44-.398-2.384-1.093-3.078c-.694-.695-1.639-.977-3.078-1.093V2.5a.75.75 0 0 0-1.5 0v1.513C15.585 4 14.839 4 14 4h-4c-.839 0-1.585 0-2.25.013z"
+                />
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M2 12c0-.839 0-1.585.013-2.25h19.974C22 10.415 22 11.161 22 12v2c0 3.771 0 5.657-1.172 6.828S17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172S2 17.771 2 14zm15 2a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-xl mb-2">
+                Garantía y respaldo en cada proyecto
+              </h3>
+              <p>
+                Trabajamos con equipos de las mejores marcas y con garantía de
+                instalación.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-brand text-white rounded-4xl overflow-hidden m-4">
+      <div class="bg-black/25 p-4 text-center">
+        <span
+          >&copy; 2026 SyS Climatización. Todos los derechos reservados.</span
+        >
+        <span>
+          Página Web desarrollada por
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/adri%C3%A1n-maturana-mu%C3%B1oz-3a7b501aa/"
+            >Adrián Maturana</a
+          >
+        </span>
+      </div>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

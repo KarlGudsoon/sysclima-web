@@ -1,0 +1,4 @@
+node_modules
+.git
+db_data
+css/tailwind.css

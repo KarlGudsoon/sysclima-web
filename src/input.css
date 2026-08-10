@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@source "./index.html";
+@source "./app.js";
+@source "./auth";
+@source "./dashboard";
+
+@font-face {
+  font-family: "Lexend";
+  src: url("../assets/fonts/Lexend-VariableFont_wght.woff2")
+    format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+@theme {
+  --font-sans: "Lexend", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand: #033275;
+  --color-secondary: #eaf3fa;
+  --color-tertiary: #cde1f5;
+  --color-accent: #03ad77;
+  --color-danger: #a80f0f;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #eaf3fa;
+}
+
+#mensaje {
+  position: fixed;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  background-color: transparent;
+  outline: 1px solid transparent;
+  backdrop-filter: blur(5px);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+#mensaje.mostrar {
+  opacity: 1;
+}
+
+#mensaje.exito {
+  background-color: rgba(3, 173, 119, 0.78);
+  outline: 1px solid rgb(3, 173, 119);
+}
+
+#mensaje.error {
+  background-color: rgba(168, 15, 15, 0.65);
+  outline: 1px solid rgb(201, 18, 18);
+}
+
+@layer components {
+  .contenedor-informacion {
+    @apply flex-1 min-w-[200px] rounded-2xl border border-black/10 bg-brand p-8 text-white shadow-md;
+  }
+
+  .contenedor-informacion h2 {
+    @apply m-0;
+  }
+
+  .boton-contacto {
+    @apply inline-block cursor-pointer rounded-3xl border-0 bg-brand px-2 py-2 font-semibold text-white transition-all duration-200 hover:outline-2 hover:outline-secondary/40 active:scale-[0.98];
+  }
+
+  .campo {
+    @apply flex flex-col gap-2;
+  }
+
+  .input-campo {
+    @apply rounded-lg border-2 border-brand/15 bg-white px-4 py-2 text-base text-black placeholder:text-black/35 focus:outline-brand;
+  }
+
+  textarea.input-campo {
+    @apply resize-none;
+  }
+
+  .btn-enviar {
+    @apply cursor-pointer rounded-lg border border-white/50 bg-accent px-2 py-2 text-base text-white hover:bg-accent/75;
+  }
+
+  .galeria-img {
+    @apply h-[300px] cursor-pointer overflow-hidden rounded-xl shadow-[0_2px_5px_rgba(0,0,0,0.5)] transition duration-200 hover:scale-[1.025];
+  }
+
+  .galeria-img img {
+    @apply h-full w-full object-cover;
+  }
+
+  .mensaje-card {
+    @apply mb-4 flex flex-col rounded-lg bg-white p-4 text-black shadow;
+  }
+
+  .btn-eliminar {
+    @apply mt-4 cursor-pointer self-start rounded-2xl border border-red-600 bg-transparent px-4 py-1 text-red-600 transition duration-200 hover:bg-red-600 hover:text-white;
+  }
+}

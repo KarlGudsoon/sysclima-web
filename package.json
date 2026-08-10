@@ -1,27 +1,14 @@
 {
   "name": "sysclima-web",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "SyS Climatización - frontend HTML/JS vanilla + API PHP",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:css": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KarlGudsoon/sysclima-web.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KarlGudsoon/sysclima-web/issues"
-  },
-  "homepage": "https://github.com/KarlGudsoon/sysclima-web#readme",
-  "dependencies": {
-    "bcrypt": "^6.0.0",
-    "express": "^5.2.1",
-    "express-session": "^1.19.0",
-    "helmet": "^8.1.0",
-    "jsonwebtoken": "^9.0.3"
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
   }
 }
