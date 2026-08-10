@@ -16,7 +16,7 @@
           <img src="assets/img/logo-1.webp" alt="" class="h-12" />
         </div>
         <ul
-          class="flex list-none w-fit text-brand rounded-3xl flex-wrap justify-center items-center bg-tertiary/80 gap-6 font-semibold"
+          class="hidden md:flex list-none w-fit text-brand rounded-3xl flex-wrap justify-center items-center bg-tertiary/80 gap-6 font-semibold"
         >
           <li
             class="px-6 py-2 hover:bg-brand hover:text-secondary rounded-3xl transition duration-200"
@@ -36,8 +36,13 @@
             <a href="#trabajos">Trabajos</a>
           </li>
         </ul>
-        <div class="flex flex-1 justify-end p-1 pr-4">
-          <button class="boton-contacto" href="/auth">
+        <div
+          class="fixed left-0 bottom-0 w-full justify-center p-4 md:relative flex flex-1 md:justify-end md:p-1 md:pr-4 z-50"
+        >
+          <a
+            class="boton-contacto border-2 border-secondary"
+            href="/pages/contacto.html"
+          >
             <div class="flex items-center gap-2 pl-2">
               Solicita tu cotización
               <div
@@ -83,17 +88,113 @@
                 </svg>
               </div>
             </div>
+          </a>
+        </div>
+        <div class="flex md:hidden">
+          <button
+            class="boton-contacto px-4 py-2"
+            command="show-modal"
+            commandfor="menuBar"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="2rem"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-dasharray="16"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path d="M5 5h14">
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    dur="0.3s"
+                    values="16;0"
+                  />
+                </path>
+                <path stroke-dashoffset="16" d="M5 12h14">
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    begin="0.3s"
+                    dur="0.3s"
+                    to="0"
+                  />
+                </path>
+                <path stroke-dashoffset="16" d="M5 19h14">
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    begin="0.6s"
+                    dur="0.3s"
+                    to="0"
+                  />
+                </path>
+              </g>
+            </svg>
           </button>
         </div>
       </nav>
     </header>
+    <dialog
+      id="menuBar"
+      class="fixed top-0 right-0 bottom-0 left-auto m-0 h-dvh max-h-none w-80 max-w-[85vw] border-0 p-0 rounded-l-3xl bg-tertiary shadow-2xl backdrop:bg-black/50"
+    >
+      <div class="flex h-full flex-col p-6">
+        <!-- Cerrar -->
+        <div class="flex justify-end">
+          <button commandfor="menuBar" command="close" class="text-xl">
+            ×
+          </button>
+        </div>
+
+        <!-- Menú -->
+        <nav class="mt-10">
+          <ul class="flex flex-col gap-6 font-semibold text-brand">
+            <li>
+              <a
+                href="#inicio"
+                class="block rounded-2xl px-6 py-3 transition hover:bg-brand hover:text-secondary"
+              >
+                Inicio
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#nosotros"
+                class="block rounded-2xl px-6 py-3 transition hover:bg-brand hover:text-secondary"
+              >
+                Misión
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#trabajos"
+                class="block rounded-2xl px-6 py-3 transition hover:bg-brand hover:text-secondary"
+              >
+                Trabajos
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </dialog>
     <main>
       <p id="mensaje"></p>
       <section
-        class="mx-auto mb-4 flex max-w-300 flex-col flex-wrap gap-4 px-4"
+        class="mx-auto mb-4 flex max-w-300 flex-col flex-wrap gap-2 md:gap-4 px-4"
       >
         <h1
-          class="m-auto mb-4 mt-4 rounded-lg p-4 text-[clamp(1.5rem,2rem+2vw,5rem)] text-center font-bold text-brand max-w-300"
+          class="m-auto mt-4 rounded-lg p-0 md:p-4 text-[clamp(1rem,1.5rem+2vw,5rem)] md:text-2vw text-center font-bold text-brand max-w-300"
         >
           La mejor solución de climatización para tu hogar, oficina o negocio
         </h1>
@@ -104,7 +205,7 @@
         </p>
       </section>
       <section
-        class="relative m-4 h-150 flex justify-center rounded-2xl z-1"
+        class="relative m-4 h-100 md:h-150 flex justify-center rounded-2xl z-1"
         id="inicio"
       >
         <video

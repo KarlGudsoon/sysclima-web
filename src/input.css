@@ -88,6 +88,28 @@ body {
   }
 }
 
+#menuBar {
+  transform: translateX(100%);
+  opacity: 0;
+
+  transition:
+    transform 300ms ease,
+    opacity 300ms ease,
+    display 300ms allow-discrete;
+}
+
+#menuBar:open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@starting-style {
+  #menuBar:open {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
 @layer components {
   .contenedor-informacion {
     @apply flex-1 min-w-[200px] rounded-2xl border border-black/10 bg-brand p-8 text-white shadow-md;
