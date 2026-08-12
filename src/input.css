@@ -38,6 +38,32 @@ body {
   background-color: #eaf3fa;
 }
 
+.fade-in-up {
+  animation: fade-in-up linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 #mensaje {
   position: fixed;
   top: 75px;
@@ -120,7 +146,7 @@ body {
   }
 
   .boton-contacto {
-    @apply inline-block cursor-pointer rounded-3xl border-0 bg-brand px-2 py-2 font-semibold text-white transition-all duration-200 hover:outline-2 hover:outline-secondary/40 active:scale-[0.98];
+    @apply inline-block cursor-pointer rounded-3xl border-0 bg-brand px-2 py-2 font-semibold text-white transition-all duration-200 outline-2 hover:outline-brand/35 active:scale-[0.98];
   }
 
   .campo {
