@@ -1,6 +1,7 @@
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", async (e) => {
+const contactoForm = document.getElementById("contact-form");
+
+if (contactoForm) {
+  contactoForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const nombre = document.getElementById("contact-nombre").value;
@@ -27,6 +28,7 @@ document
       mostrarMensaje("Error de conexión, intenta de nuevo", "error");
     }
   });
+}
 
 function mostrarMensaje(mensaje, tipo) {
   const mensajeElement = document.getElementById("mensaje");

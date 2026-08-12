@@ -2,6 +2,7 @@
 
 @source "./index.html";
 @source "./app.js";
+@source "./pages";
 @source "./auth";
 @source "./dashboard";
 

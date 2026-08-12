@@ -382,7 +382,8 @@
     <footer class="bg-brand text-white rounded-4xl overflow-hidden m-4">
       <div class="bg-black/25 p-4 text-center">
         <span
-          >&copy; 2026 SyS Climatización. Todos los derechos reservados.</span
+          >&copy; <span id="year"></span> SyS Climatización. Todos los derechos
+          reservados.</span
         >
         <span>
           Página Web desarrollada por
@@ -396,5 +397,9 @@
     </footer>
 
     <script src="/app.js" defer></script>
+    <script>
+      const year = new Date().getFullYear();
+      document.getElementById("year").textContent = year;
+    </script>
   </body>
 </html>

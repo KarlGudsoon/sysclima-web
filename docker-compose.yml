@@ -13,8 +13,21 @@ services:
       DB_USER: sysclima
       DB_PASSWORD: sysclima123
       APP_ENV: dev
+      MAIL_SMTP_HOST: mailpit
+      MAIL_SMTP_PORT: 1025
+      MAIL_SMTP_USER: contact@sysclima.cl
+      MAIL_SMTP_PASSWORD: x
+      MAIL_SMTP_SECURE: ""
+      MAIL_SMTP_AUTH: "false"
     depends_on:
       - db
+      - mailpit
+
+  mailpit:
+    image: axllent/mailpit
+    container_name: sysclima-mailpit
+    ports:
+      - "8025:8025"
 
   db:
     image: mysql:8.0
