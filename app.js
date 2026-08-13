@@ -60,7 +60,7 @@ function mostrarTrabajoEnModal(trabajo) {
   document.getElementById("trabajo-modal-descripcion").textContent =
     trabajo.descripcion;
   document.getElementById("trabajo-modal-link").href =
-    `/pages/trabajo.html?id=${trabajo.id}`;
+    `/proyecto?id=${trabajo.id}`;
 
   const miniaturas = document.getElementById("trabajo-modal-miniaturas");
   miniaturas.innerHTML = "";

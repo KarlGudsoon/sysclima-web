@@ -3,6 +3,10 @@ Options -Indexes
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+    # Rutas amigables
+    RewriteRule ^contacto/?$ pages/contacto.html [L]
+    RewriteRule ^proyecto/?$  pages/proyecto.html [L]
+
     # Front controller: todas las rutas /api/* van a api/index.php
     # (salvo archivos reales, para no romper la propia index.php)
     RewriteCond %{REQUEST_FILENAME} !-f

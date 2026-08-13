@@ -147,7 +147,9 @@ html:has(#trabajoModal[open]) {
 #trabajoModal:open {
   opacity: 1;
   transform: scale(1);
-  transition: opacity 250ms ease, transform 250ms ease;
+  transition:
+    opacity 250ms ease,
+    transform 250ms ease;
 }
 
 @starting-style {
@@ -167,7 +169,7 @@ html:has(#trabajoModal[open]) {
   }
 
   .boton-contacto {
-    @apply inline-block cursor-pointer rounded-3xl border-0 bg-brand px-2 py-2 font-semibold text-white transition-all duration-200 outline-2 hover:outline-brand/35 active:scale-[0.98];
+    @apply inline-block cursor-pointer rounded-3xl border-0 bg-brand px-2 py-2 shadow-md font-semibold text-white transition-all duration-200 outline-2 outline-transparent hover:outline-brand/35 active:scale-[0.98];
   }
 
   .campo {
@@ -175,7 +177,7 @@ html:has(#trabajoModal[open]) {
   }
 
   .input-campo {
-    @apply rounded-lg border-2 border-brand/15 bg-white px-4 py-2 text-base text-black placeholder:text-black/35 focus:outline-brand;
+    @apply rounded-lg border-2 border-brand/15 bg-white px-4 py-2 text-base text-black placeholder:text-black/35 focus:outline-brand focus:shadow-md focus:shadow-tertiary;
   }
 
   textarea.input-campo {
