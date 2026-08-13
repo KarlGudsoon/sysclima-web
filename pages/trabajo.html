@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/tailwind.css" />
+    <link rel="preload" href="/css/tailwind.css" as="style" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>Proyecto - SyS Climatización</title>
+  </head>
+  <body class="min-h-dvh flex flex-col">
+    <header>
+      <nav class="flex flex-wrap items-center justify-between px-2 py-4">
+        <div class="flex-1 p-1">
+          <img src="/assets/img/logo-1.webp" alt="" class="h-12" />
+        </div>
+        <ul
+          class="flex list-none w-fit text-brand rounded-3xl flex-wrap justify-center items-center bg-tertiary/80 gap-6 font-semibold"
+        >
+          <li
+            class="px-6 py-2 hover:bg-brand hover:text-secondary rounded-3xl transition duration-200"
+          >
+            <a href="/">Inicio</a>
+          </li>
+          ·
+          <li
+            class="px-6 py-2 hover:bg-brand hover:text-secondary rounded-3xl transition-colors duration-200"
+          >
+            <a href="/#nosotros">Misión</a>
+          </li>
+          ·
+          <li
+            class="px-6 py-2 hover:bg-brand hover:text-secondary rounded-3xl transition duration-200"
+          >
+            <a href="/#trabajos">Trabajos</a>
+          </li>
+        </ul>
+        <div class="flex flex-1 justify-end p-1 pr-4">
+          <a class="boton-contacto" href="/pages/contacto.html">
+            <div class="flex items-center gap-2 pl-2">
+              Solicita tu cotización
+              <div
+                class="flex justify-center items-center bg-secondary size-8 rounded-full"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="rotate-45"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <g
+                    fill="none"
+                    stroke="#033275"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path stroke-dasharray="20" d="M12 21l0 -17.5">
+                      <animate
+                        fill="freeze"
+                        attributeName="stroke-dashoffset"
+                        dur="0.3s"
+                        values="20;0"
+                      />
+                    </path>
+                    <path
+                      stroke-dasharray="12"
+                      stroke-dashoffset="12"
+                      d="M12 3l7 7M12 3l-7 7"
+                    >
+                      <animate
+                        fill="freeze"
+                        attributeName="stroke-dashoffset"
+                        begin="0.3s"
+                        dur="0.2s"
+                        to="0"
+                      />
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main class="flex-1 flex flex-col items-center px-4 py-8" id="trabajo-detalle">
+      <div id="trabajo-cargando" class="text-brand font-semibold">
+        Cargando proyecto...
+      </div>
+
+      <div id="trabajo-error" class="hidden text-center text-brand">
+        <h1 class="mb-4 text-3xl font-bold">Proyecto no encontrado</h1>
+        <a class="boton-contacto bg-brand text-secondary" href="/#trabajos"
+          >Volver a los trabajos</a
+        >
+      </div>
+
+      <article id="trabajo-contenido" class="hidden w-full max-w-300">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <span class="font-bold opacity-50">PROYECTO</span>
+            <h1 id="trabajo-titulo" class="text-4xl font-bold text-brand"></h1>
+            <p id="trabajo-ubicacion" class="text-brand/60"></p>
+          </div>
+          <a class="boton-contacto bg-brand text-secondary" href="/pages/contacto.html">
+            <div class="flex items-center gap-2 pl-2">
+              Solicita tu cotización
+              <div
+                class="flex justify-center items-center bg-secondary text-brand size-8 rounded-full"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="rotate-45"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path stroke-dasharray="20" d="M12 21l0 -17.5">
+                      <animate
+                        fill="freeze"
+                        attributeName="stroke-dashoffset"
+                        dur="0.3s"
+                        values="20;0"
+                      />
+                    </path>
+                    <path
+                      stroke-dasharray="12"
+                      stroke-dashoffset="12"
+                      d="M12 3l7 7M12 3l-7 7"
+                    >
+                      <animate
+                        fill="freeze"
+                        attributeName="stroke-dashoffset"
+                        begin="0.3s"
+                        dur="0.2s"
+                        to="0"
+                      />
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <p id="trabajo-descripcion" class="mt-4 text-brand"></p>
+
+        <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div id="trabajo-servicios" class="contenedor-informacion bg-secondary text-brand"></div>
+          <div id="trabajo-detalles" class="contenedor-informacion bg-secondary text-brand"></div>
+        </div>
+
+        <h2 class="mt-8 text-2xl font-bold text-brand">Galería</h2>
+        <div id="trabajo-galeria" class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3"></div>
+      </article>
+    </main>
+    <footer class="bg-brand text-white rounded-4xl overflow-hidden m-4">
+      <div class="bg-black/25 p-4 text-center">
+        <span
+          >&copy; 2026 SyS Climatización. Todos los derechos reservados.</span
+        >
+        <span>
+          Página Web desarrollada por
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/adri%C3%A1n-maturana-mu%C3%B1oz-3a7b501aa/"
+            >Adrián Maturana</a
+          >
+        </span>
+      </div>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

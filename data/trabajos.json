@@ -1,0 +1,127 @@
+{
+  "trabajos": [
+    {
+      "id": 1,
+      "titulo": "Instalación residencial",
+      "resumen": "Instalación de equipo de aire acondicionado inverter en departamento.",
+      "descripcion": "Proyecto de climatización para un departamento residencial. Se instaló un equipo split inverter de alta eficiencia energética, con recarga de gas refrigerante y prueba de hermeticidad. El equipo fue ubicado para optimizar la distribución del aire en los espacios principales.",
+      "ubicacion": "Santiago",
+      "fecha": "2025",
+      "servicios": ["Instalación", "Recarga de gas", "Prueba de hermeticidad"],
+      "detalles": [
+        "Equipo split inverter 12.000 BTU",
+        "Marca Daikin",
+        "Sistema inverter de alta eficiencia",
+        "Recarga de gas R410A"
+      ],
+      "imagenPortada": "/assets/img/trabajos/01.jpeg",
+      "galeria": [
+        "/assets/img/trabajos/01.jpeg",
+        "/assets/img/trabajos/02.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Climatización de oficina",
+      "resumen": "Instalación de equipos para climatizar un espacio de oficinas.",
+      "descripcion": "Acondicionamiento térmico de una oficina con dos equipos split, instalación de ductos de distribución y control de temperatura por zonas. Se priorizó un bajo nivel de ruido para no interferir con el trabajo diario.",
+      "ubicacion": "Santiago",
+      "fecha": "2025",
+      "servicios": ["Instalación", "Ductos de distribución"],
+      "detalles": [
+        "Equipos split 9.000 BTU y 18.000 BTU",
+        "Control de zonas",
+        "Instalación de ductos",
+        "Bajo nivel de ruido"
+      ],
+      "imagenPortada": "/assets/img/trabajos/03.jpeg",
+      "galeria": [
+        "/assets/img/trabajos/03.jpeg",
+        "/assets/img/trabajos/04.jpeg",
+        "/assets/img/trabajos/05.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Mantenimiento preventivo",
+      "resumen": "Mantenimiento completo de sistemas de climatización para edificio.",
+      "descripcion": "Plan de mantenimiento preventivo para un edificio residencial: limpieza de filtros, revisión de gas refrigerante, chequeo eléctrico y puesta a punto de todos los equipos para la temporada de calor.",
+      "ubicacion": "Santiago",
+      "fecha": "2024",
+      "servicios": ["Mantenimiento preventivo", "Limpieza de filtros"],
+      "detalles": [
+        "Limpieza de filtros",
+        "Revisión de carga de gas",
+        "Chequeo eléctrico",
+        "Plan semestral"
+      ],
+      "imagenPortada": "/assets/img/trabajos/06.jpeg",
+      "galeria": [
+        "/assets/img/trabajos/06.jpeg",
+        "/assets/img/trabajos/07.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "Reparación de equipo central",
+      "resumen": "Diagnóstico y reparación de falla en sistema de climatización central.",
+      "descripcion": "Reparación correctiva de un sistema central con falla de compresor. Se realizó el diagnóstico, reemplazo del compresor, recarga de gas y pruebas de funcionamiento hasta dejar el equipo operando de forma óptima.",
+      "ubicacion": "Santiago",
+      "fecha": "2024",
+      "servicios": ["Reparación", "Reemplazo de compresor"],
+      "detalles": [
+        "Reemplazo de compresor",
+        "Recarga de gas",
+        "Diagnóstico de falla",
+        "Pruebas de funcionamiento"
+      ],
+      "imagenPortada": "/assets/img/trabajos/08.jpeg",
+      "galeria": [
+        "/assets/img/trabajos/08.jpeg",
+        "/assets/img/trabajos/09.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "titulo": "Instalación comercial",
+      "resumen": "Climatización integral para local comercial.",
+      "descripcion": "Instalación integral de climatización para un local comercial, con equipos de alta capacidad para soportar un alto flujo de personas y condiciones de temperatura exigentes durante todo el año.",
+      "ubicacion": "Santiago",
+      "fecha": "2024",
+      "servicios": ["Instalación", "Asesoría de equipos"],
+      "detalles": [
+        "Equipos de alta capacidad",
+        "Marca LG",
+        "Alto flujo de personas",
+        "Instalación integral"
+      ],
+      "imagenPortada": "/assets/img/trabajos/10.jpeg",
+      "galeria": [
+        "/assets/img/trabajos/10.jpeg",
+        "/assets/img/trabajos/11.jpg",
+        "/assets/img/trabajos/12.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "titulo": "Proyecto de climatización completo",
+      "resumen": "Diseño e instalación de climatización para vivienda familiar.",
+      "descripcion": "Proyecto completo de climatización para una vivienda familiar: diseño de la distribución, instalación de múltiples equipos, tuberías y controles, entregando una solución integral de confort para toda la casa.",
+      "ubicacion": "Viña del Mar",
+      "fecha": "2023",
+      "servicios": ["Diseño", "Instalación", "Tuberías y controles"],
+      "detalles": [
+        "Múltiples equipos",
+        "Diseño de distribución",
+        "Tuberías y controles",
+        "Solución integral"
+      ],
+      "imagenPortada": "/assets/img/trabajos/13.jpeg",
+      "galeria": [
+        "/assets/img/trabajos/13.jpeg",
+        "/assets/img/trabajos/14.jpg",
+        "/assets/img/trabajos/15.jpg"
+      ]
+    }
+  ]
+}

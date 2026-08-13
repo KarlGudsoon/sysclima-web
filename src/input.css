@@ -3,9 +3,6 @@
 @source "./index.html";
 @source "./app.js";
 @source "./pages";
-@source "./auth";
-@source "./dashboard";
-
 @font-face {
   font-family: "Lexend";
   src: url("../assets/fonts/Lexend-VariableFont_wght.woff2")
@@ -32,6 +29,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 50px;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -137,6 +135,28 @@ body {
   }
 }
 
+#trabajoModal {
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+html:has(#trabajoModal[open]) {
+  overflow: hidden;
+}
+
+#trabajoModal:open {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 250ms ease, transform 250ms ease;
+}
+
+@starting-style {
+  #trabajoModal:open {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
 @layer components {
   .contenedor-informacion {
     @apply flex-1 min-w-[200px] rounded-2xl border border-black/10 bg-brand p-8 text-white shadow-md;
@@ -172,6 +192,10 @@ body {
 
   .galeria-img img {
     @apply h-full w-full object-cover;
+  }
+
+  .item-trabajo {
+    @apply flex cursor-pointer flex-col justify-between rounded-3xl border-0 bg-white p-4 duration-200  text-brand shadow outline-2 outline-transparent outline-offset-2 transition hover:scale-102 hover:outline-brand/35 hover:-translate-y-1 hover:shadow-lg active:scale-[0.99] focus-visible:outline-2 focus-visible:outline-brand;
   }
 
   .mensaje-card {
